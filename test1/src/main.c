@@ -8,9 +8,11 @@
 #include "Led.h"
 #include "Tim.h"
 
+
 int x;
 void main(void)
 {
+   USART_Config();
    while (1)
    {
       LED_INIT();

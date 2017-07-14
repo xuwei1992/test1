@@ -23,7 +23,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
-
+#include "USART_Config.h"
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
   */
@@ -136,6 +136,16 @@ void SysTick_Handler(void)
 {
 }
 
+void DEBUG_USART_IRQHandler(void)
+{
+   uint8_t ucTemp;
+
+   if (USART_GetITStatus(DEBUG_USARTx,USART_IT_RXNE)!=RESET)
+   {
+      ucTemp = USART_ReceiveData( DEBUG_USARTx );
+      USART_SendData(DEBUG_USARTx,ucTemp);
+   }
+}
 /******************************************************************************/
 /*                 STM32F10x Peripherals Interrupt Handlers                   */
 /*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */
