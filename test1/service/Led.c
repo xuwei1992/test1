@@ -2,11 +2,11 @@
 #include "led.h"
 
 void Delay_ms_led(u16 nms)
-{	
-	uint16_t i,j;
-	for(i=0;i<nms;i++)
-		for(j=0;j<8500;j++);
-} 
+{
+   uint16_t i,j;
+   for(i=0;i<nms;i++)
+      for(j=0;j<8500;j++);
+}
 
 void LED_INIT(void)
 {

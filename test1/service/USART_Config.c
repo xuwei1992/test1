@@ -8,8 +8,9 @@
 
 
 
-#include "stm32f10x_usart.h"
 #include "USART_Config.h"
+
+#include "stm32f10x_usart.h"
 
 static void NVIC_Configuration(void)
 {

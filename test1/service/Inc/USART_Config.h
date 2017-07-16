@@ -4,7 +4,7 @@
  *  Created on: 2017Äê7ÔÂ14ÈÕ
  *      Author: xuwei
  */
-
+#include "stm32f10x.h"
 
 #define DEBUG_USARTx USART1
 #define DEBUG_USART_CLK RCC_APB2Periph_USART1
